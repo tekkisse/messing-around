@@ -1,4 +1,1 @@
-helm install my-kasm ./kasm-user-proxy \
-  --set ingress.hosts[0].host="*.example.com" \
-  --set image.repository=kasmweb/firefox \
-  --set image.tag=dev
+helm install my-kasm .  --set ingress.hosts[0].host="*.example.com"   --set image.repository=kasmweb/firefox   --set image.tag=1.17.0-rolling-daily

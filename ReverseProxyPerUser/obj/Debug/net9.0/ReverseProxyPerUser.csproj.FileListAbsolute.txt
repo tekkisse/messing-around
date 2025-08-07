@@ -30,10 +30,10 @@ C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\ReverseP.A9327A03.Up2Date
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\ReverseProxyPerUser.dll
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\refint\ReverseProxyPerUser.dll
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\ReverseProxyPerUser.pdb
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\ReverseProxyPerUser.genruntimeconfig.cache
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\ref\ReverseProxyPerUser.dll
+C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\ReverseProxyPerUser.sourcelink.json

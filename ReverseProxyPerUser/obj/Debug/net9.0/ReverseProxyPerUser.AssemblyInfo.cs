@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReverseProxyPerUser")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ee61736be2ee51f929aa4d3d003469701220c9b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25af186475f6bd8d37116a20a9c20a9ec18d0451")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReverseProxyPerUser")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReverseProxyPerUser")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

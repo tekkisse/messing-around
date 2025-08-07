@@ -20,5 +20,8 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: 6901
+          env:
+            - name: VNC_PW
+              value: {{ .Values.kasm.password | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
