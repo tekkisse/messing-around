@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "kasm-user-proxy.fullname" . }}
+spec:
+  selector:
+    app: {{ include "kasm-user-proxy.name" . }}
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 6901

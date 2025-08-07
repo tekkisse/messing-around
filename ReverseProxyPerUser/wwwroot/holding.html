@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Starting your session...</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+</head>
+<body>
+  <h2>🕒 Launching your environment...</h2>
+  <p>Please wait, this may take a few moments.</p>
+
+  <script>
+    const connection = new signalR.HubConnectionBuilder()
+      .withUrl("/startupHub")
+      .build();
+
+    connection.on("BackendReady", url => window.location.href = url);
+    connection.on("BackendFailed", () => {
+      document.body.innerHTML = "<h2>❌ Failed to start your environment.</h2>";
+    });
+
+    connection.start().then(() => {
+      const cid = connection.connectionId;
+      const url = new URL(window.location.href);
+      url.searchParams.set("cid", cid);
+      history.replaceState({}, "", url);
+    });
+  </script>
+</body>
+</html>

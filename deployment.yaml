@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "kasm-user-proxy.fullname" . }}
+  labels:
+    app: {{ include "kasm-user-proxy.name" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "kasm-user-proxy.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "kasm-user-proxy.name" . }}
+    spec:
+      containers:
+        - name: firefox
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 6901
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
