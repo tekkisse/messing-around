@@ -1,27 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "kasm-user-proxy.fullname" . }}
-  labels:
-    app: {{ include "kasm-user-proxy.name" . }}
+  name: {{ include "browser.isolation" . }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 1
   selector:
     matchLabels:
-      app: {{ include "kasm-user-proxy.name" . }}
+      app: {{ include "browser.app" . }}
   template:
     metadata:
       labels:
-        app: {{ include "kasm-user-proxy.name" . }}
+        app: {{ include "browser.app" . }}
     spec:
       containers:
-        - name: firefox
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        - name: browser-proxy
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          #imagePullPolicy: IfNotPresent
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - containerPort: 6901
+            - containerPort: 8080
           env:
-            - name: VNC_PW
-              value: {{ .Values.kasm.password | quote }}
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+            - name: KUBERNETES_SERVICE_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+            - name: KUBERNETES_SERVICE_PORT
+              value: "443"

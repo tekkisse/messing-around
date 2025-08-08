@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\simon\\source\\repos\\messing-around\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|C:\\Users\\simon\\source\\repos\\messing-around\\run.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|solutionrelative:run.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|C:\\Users\\simon\\source\\repos\\messing-around\\Chart.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|solutionrelative:Chart.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FC43157-4193-473B-A001-5825DA52974C}|NewFolder1{8FC43157-4193-473B-A001-5825DA52974C}|C:\\Users\\simon\\source\\repos\\messing-around\\ingress.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8FC43157-4193-473B-A001-5825DA52974C}|NewFolder1{8FC43157-4193-473B-A001-5825DA52974C}|solutionrelative:ingress.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FC43157-4193-473B-A001-5825DA52974C}|NewFolder1{8FC43157-4193-473B-A001-5825DA52974C}|C:\\Users\\simon\\source\\repos\\messing-around\\services.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8FC43157-4193-473B-A001-5825DA52974C}|NewFolder1{8FC43157-4193-473B-A001-5825DA52974C}|solutionrelative:services.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FC43157-4193-473B-A001-5825DA52974C}|NewFolder1{8FC43157-4193-473B-A001-5825DA52974C}|C:\\Users\\simon\\source\\repos\\messing-around\\deployment.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8FC43157-4193-473B-A001-5825DA52974C}|NewFolder1{8FC43157-4193-473B-A001-5825DA52974C}|solutionrelative:deployment.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|C:\\Users\\simon\\source\\repos\\messing-around\\values.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|solutionrelative:values.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{E6C34EEE-6981-3A1B-0738-208DD917E64F}|ReverseProxyPerUser\\ReverseProxyPerUser.csproj|c:\\users\\simon\\source\\repos\\messing-around\\reverseproxyperuser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6C34EEE-6981-3A1B-0738-208DD917E64F}|ReverseProxyPerUser\\ReverseProxyPerUser.csproj|solutionrelative:reverseproxyperuser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6C34EEE-6981-3A1B-0738-208DD917E64F}|ReverseProxyPerUser\\ReverseProxyPerUser.csproj|c:\\users\\simon\\source\\repos\\messing-around\\reverseproxyperuser\\services\\kubernetesstartupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6C34EEE-6981-3A1B-0738-208DD917E64F}|ReverseProxyPerUser\\ReverseProxyPerUser.csproj|solutionrelative:reverseproxyperuser\\services\\kubernetesstartupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6C34EEE-6981-3A1B-0738-208DD917E64F}|ReverseProxyPerUser\\ReverseProxyPerUser.csproj|c:\\users\\simon\\source\\repos\\messing-around\\reverseproxyperuser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6C34EEE-6981-3A1B-0738-208DD917E64F}|ReverseProxyPerUser\\ReverseProxyPerUser.csproj|solutionrelative:reverseproxyperuser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6C34EEE-6981-3A1B-0738-208DD917E64F}|ReverseProxyPerUser\\ReverseProxyPerUser.csproj|c:\\users\\simon\\source\\repos\\messing-around\\reverseproxyperuser\\services\\startupcheckservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6C34EEE-6981-3A1B-0738-208DD917E64F}|ReverseProxyPerUser\\ReverseProxyPerUser.csproj|solutionrelative:reverseproxyperuser\\services\\startupcheckservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6C34EEE-6981-3A1B-0738-208DD917E64F}|ReverseProxyPerUser\\ReverseProxyPerUser.csproj|c:\\users\\simon\\source\\repos\\messing-around\\reverseproxyperuser\\reverseproxyperuser.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E6C34EEE-6981-3A1B-0738-208DD917E64F}|ReverseProxyPerUser\\ReverseProxyPerUser.csproj|solutionrelative:reverseproxyperuser\\reverseproxyperuser.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,99 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "run.txt",
-              "DocumentMoniker": "C:\\Users\\simon\\source\\repos\\messing-around\\run.txt",
-              "RelativeDocumentMoniker": "run.txt",
-              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\run.txt",
-              "RelativeToolTip": "run.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-08-07T12:30:11.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "values.yaml",
-              "DocumentMoniker": "C:\\Users\\simon\\source\\repos\\messing-around\\values.yaml",
-              "RelativeDocumentMoniker": "values.yaml",
-              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\values.yaml",
-              "RelativeToolTip": "values.yaml",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAuwCAAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-08-07T12:28:32.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ingress.yaml",
-              "DocumentMoniker": "C:\\Users\\simon\\source\\repos\\messing-around\\ingress.yaml",
-              "RelativeDocumentMoniker": "ingress.yaml",
-              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\ingress.yaml",
-              "RelativeToolTip": "ingress.yaml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAuwBoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-08-07T12:28:04.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "services.yaml",
-              "DocumentMoniker": "C:\\Users\\simon\\source\\repos\\messing-around\\services.yaml",
-              "RelativeDocumentMoniker": "services.yaml",
-              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\services.yaml",
-              "RelativeToolTip": "services.yaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-08-07T12:27:53.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "deployment.yaml",
-              "DocumentMoniker": "C:\\Users\\simon\\source\\repos\\messing-around\\deployment.yaml",
-              "RelativeDocumentMoniker": "deployment.yaml",
-              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\deployment.yaml",
-              "RelativeToolTip": "deployment.yaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-08-07T12:27:43.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Chart.yaml",
-              "DocumentMoniker": "C:\\Users\\simon\\source\\repos\\messing-around\\Chart.yaml",
-              "RelativeDocumentMoniker": "Chart.yaml",
-              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\Chart.yaml",
-              "RelativeToolTip": "Chart.yaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-08-07T12:26:59.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "KubernetesStartupService.cs",
-              "DocumentMoniker": "C:\\Users\\simon\\source\\repos\\messing-around\\ReverseProxyPerUser\\Services\\KubernetesStartupService.cs",
-              "RelativeDocumentMoniker": "ReverseProxyPerUser\\Services\\KubernetesStartupService.cs",
-              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\ReverseProxyPerUser\\Services\\KubernetesStartupService.cs",
-              "RelativeToolTip": "ReverseProxyPerUser\\Services\\KubernetesStartupService.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAADwAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T12:21:46.215Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -165,15 +58,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "StartupCheckServices.cs",
+              "DocumentMoniker": "C:\\Users\\simon\\source\\repos\\messing-around\\ReverseProxyPerUser\\Services\\StartupCheckServices.cs",
+              "RelativeDocumentMoniker": "ReverseProxyPerUser\\Services\\StartupCheckServices.cs",
+              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\ReverseProxyPerUser\\Services\\StartupCheckServices.cs",
+              "RelativeToolTip": "ReverseProxyPerUser\\Services\\StartupCheckServices.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T10:43:36.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KubernetesStartupService.cs",
+              "DocumentMoniker": "C:\\Users\\simon\\source\\repos\\messing-around\\ReverseProxyPerUser\\Services\\KubernetesStartupService.cs",
+              "RelativeDocumentMoniker": "ReverseProxyPerUser\\Services\\KubernetesStartupService.cs",
+              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\ReverseProxyPerUser\\Services\\KubernetesStartupService.cs",
+              "RelativeToolTip": "ReverseProxyPerUser\\Services\\KubernetesStartupService.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAuwGsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T10:43:29.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReverseProxyPerUser.csproj",
+              "DocumentMoniker": "C:\\Users\\simon\\source\\repos\\messing-around\\ReverseProxyPerUser\\ReverseProxyPerUser.csproj",
+              "RelativeDocumentMoniker": "ReverseProxyPerUser\\ReverseProxyPerUser.csproj",
+              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\ReverseProxyPerUser\\ReverseProxyPerUser.csproj",
+              "RelativeToolTip": "ReverseProxyPerUser\\ReverseProxyPerUser.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-07T20:46:11.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\simon\\source\\repos\\messing-around\\ReverseProxyPerUser\\Program.cs",
               "RelativeDocumentMoniker": "ReverseProxyPerUser\\Program.cs",
-              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\ReverseProxyPerUser\\Program.cs",
-              "RelativeToolTip": "ReverseProxyPerUser\\Program.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAG8AAAAWAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\simon\\source\\repos\\messing-around\\ReverseProxyPerUser\\Program.cs*",
+              "RelativeToolTip": "ReverseProxyPerUser\\Program.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T12:22:15.947Z",
+              "WhenOpened": "2025-08-07T19:12:58.478Z",
               "EditorCaption": ""
             }
           ]

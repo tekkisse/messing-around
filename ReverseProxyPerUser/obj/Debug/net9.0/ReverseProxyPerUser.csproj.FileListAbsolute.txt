@@ -37,3 +37,4 @@ C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\ReverseProxyPerUser.genruntimeconfig.cache
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\ref\ReverseProxyPerUser.dll
 C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\ReverseProxyPerUser.sourcelink.json
+C:\Users\simon\source\repos\messing-around\ReverseProxyPerUser\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

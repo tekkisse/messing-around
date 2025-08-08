@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "kasm-user-proxy.fullname" . }}
+  name: {{ include "browser.isolation" . }}-service
 spec:
   selector:
-    app: {{ include "kasm-user-proxy.name" . }}
+    app: {{ include "browser.app" . }}
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 6901
+    - port: 8081
+      targetPort: 8080
+      protocol: TCP

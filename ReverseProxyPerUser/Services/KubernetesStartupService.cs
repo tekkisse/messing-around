@@ -1,12 +1,13 @@
-using System;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 using k8s;
+using k8s.Autorest;
 using k8s.Models;
 using Microsoft.AspNetCore.SignalR;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
 using ReverseProxyPerUser.Hubs;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ReverseProxyPerUser.Services
 {
@@ -17,8 +18,9 @@ namespace ReverseProxyPerUser.Services
         private readonly ILogger<KubernetesStartupService> _logger;
         private readonly IMemoryCache _cache;
 
-        private const string Namespace = "default"; // Adjust as needed
-        private const string Image = "kasmweb/firefox:1.17.0-rolling-daily"; // Or whatever image you're using
+        // could auto detect : string ns = await File.ReadAllTextAsync("/var/run/secrets/kubernetes.io/serviceaccount/namespace");
+        private const string Namespace = "default";  
+        private const string Image = "kasmweb/chrome:1.17.0-rolling-daily";  
 
         public KubernetesStartupService(
             IHubContext<StartupNotifierHub> hub,
@@ -33,6 +35,8 @@ namespace ReverseProxyPerUser.Services
             if (KubernetesClientConfiguration.IsInCluster())
             {
                 config = KubernetesClientConfiguration.InClusterConfig();
+                // docker desktop odd-ness
+                config.Host = "https://192.168.65.3:6443";
             }
             else
             {
@@ -44,14 +48,18 @@ namespace ReverseProxyPerUser.Services
 
         public async Task<bool> IsPodRunning(string username)
         {
+            Console.WriteLine("check user: " + username);
+
             try
             {
                 var pods = await _client.ListNamespacedPodAsync(Namespace, labelSelector: $"app={username}");
 
                 foreach (var pod in pods.Items)
                 {
+                    Console.WriteLine(pod.Name() + " is " + pod.Status.Phase);
                     if (pod.Status.Phase == "Running")
                     {
+                        Console.WriteLine("running");
                         return true;
                     }
                 }
@@ -59,8 +67,10 @@ namespace ReverseProxyPerUser.Services
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error checking pod status");
+                Console.WriteLine("error " + ex);
             }
 
+            Console.WriteLine("no pod for user: "+username);
             return false;
         }
 
@@ -87,6 +97,7 @@ namespace ReverseProxyPerUser.Services
         {
             if (_cache.TryGetValue($"startup:{username}", out _))
             {
+                Console.WriteLine("not trying as request already made (in last 5 min): "+ username);
                 return;
             }
 
@@ -94,8 +105,9 @@ namespace ReverseProxyPerUser.Services
 
             await _hub.Clients.Client(connectionId).SendAsync("status", "Starting container...");
 
-            string password = GeneratePassword();
-
+            //string password = GeneratePassword();
+            string password = "password";
+            
             await CreateDeploymentAsync(username, password);
             await CreateServiceAsync(username);
 
@@ -110,6 +122,8 @@ namespace ReverseProxyPerUser.Services
 
         private async Task CreateDeploymentAsync(string username, string password)
         {
+            Console.WriteLine("New deploymnet for: " + username);
+            
             var deploy = new V1Deployment
             {
                 Metadata = new V1ObjectMeta
@@ -153,11 +167,21 @@ namespace ReverseProxyPerUser.Services
                 }
             };
 
-            await _client.CreateNamespacedDeploymentAsync(deploy, Namespace);
+            try
+            {
+                await _client.CreateNamespacedDeploymentAsync(deploy, Namespace);
+            }
+            catch (k8s.Autorest.HttpOperationException ex)
+            {
+                Console.WriteLine("Kubernetes API error: " + ex.Response.Content);
+                throw;
+            }
+            ;
         }
 
         private async Task CreateServiceAsync(string username)
         {
+            Console.WriteLine("New service for: "+username);
             var svc = new V1Service
             {
                 Metadata = new V1ObjectMeta
@@ -172,7 +196,7 @@ namespace ReverseProxyPerUser.Services
                     {
                         new V1ServicePort
                         {
-                            Port = 443,
+                            Port = 8088,
                             TargetPort = 6901
                         }
                     }

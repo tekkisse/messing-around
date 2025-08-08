@@ -17,10 +17,16 @@ public class StartupCheckService
 
     public async Task StartBackendCheckAsync(string user, string connectionId)
     {
+        Console.WriteLine($"Create a pod for: {user}");
         if (!_cache.TryGetValue($"start:{user}", out _))
         {
+            Console.WriteLine($"Creating a pod for: {user}");
             _ = _k8s.StartUserApp(user, connectionId);
             _cache.Set($"start:{user}", true, TimeSpan.FromMinutes(5));
+        }
+        else
+        {
+            Console.WriteLine("Blocked by signal in cache: "+user);
         }
     }
 }

@@ -1,8 +1,4 @@
 replicaCount: 1
-image:
-  repository: kasmweb/firefox
-  tag: dev
-  pullPolicy: IfNotPresent
 
 resources:
   limits:
@@ -14,6 +10,11 @@ resources:
 
 kasm:
   password: password
+
+image:
+  repository: simon
+  tag: v1
+  pullPolicy: Never
 
 
 ingress:

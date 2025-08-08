@@ -1,11 +1,14 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.AspNetCore.Authentication;
-using Yarp.ReverseProxy.Configuration;
-using Yarp.ReverseProxy.Transforms;
 using ReverseProxyPerUser.Hubs;
 using ReverseProxyPerUser.Services;
+using System.Net.Http;
+using Yarp.ReverseProxy.Configuration;
+using Yarp.ReverseProxy.Transforms;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +24,14 @@ builder.Services.AddSingleton<KubernetesStartupService>();
 builder.Services.AddSingleton<StartupCheckService>();
 
 builder.Services.AddReverseProxy()
+    .ConfigureHttpClient((context, handler) =>
+    {
+        if (handler is SocketsHttpHandler socketsHandler)
+        {
+            socketsHandler.SslOptions.RemoteCertificateValidationCallback =
+                (sender, certificate, chain, sslPolicyErrors) => true; // Accept all certs
+        }
+    })
     .LoadFromMemory(new[]
     {
         new RouteConfig()
@@ -45,8 +56,12 @@ builder.Services.AddReverseProxy()
     })
     .AddTransforms(transformContext =>
     {
+       
+
         transformContext.AddRequestTransform(async context =>
         {
+            Console.WriteLine("Raw URL: " + context.HttpContext.Request.GetDisplayUrl());
+             
             var user = context.HttpContext.User.Identity?.Name;
             if (string.IsNullOrEmpty(user))
             {
@@ -55,17 +70,19 @@ builder.Services.AddReverseProxy()
                 return;
             }
 
+            Console.WriteLine("User: "+user);
+            
             var startupCheck = context.HttpContext.RequestServices.GetRequiredService<StartupCheckService>();
             var cache = context.HttpContext.RequestServices.GetRequiredService<IMemoryCache>();
 
             bool isUp = await startupCheck.IsBackendAvailable(user);
             if (!isUp)
             {
+
                 string connectionId = context.HttpContext.Request.Query["cid"];
                 if (!string.IsNullOrEmpty(connectionId))
-                {
+                {                
                     _ = startupCheck.StartBackendCheckAsync(user, connectionId);
-                    cache.Set($"start:{user}", true, TimeSpan.FromMinutes(5));
                 }
 
                 context.HttpContext.Response.ContentType = "text/html";
@@ -73,12 +90,25 @@ builder.Services.AddReverseProxy()
                 return;
             }
 
-            var uriBuilder = new UriBuilder(context.ProxyRequest.RequestUri!)
+            var originalRequest = context.HttpContext.Request;
+
+            var uriBuilder = new UriBuilder()
             {
-                Scheme = "https",
-                Host = $"{user}.example.com",
-                Port = -1
+                Scheme = Uri.UriSchemeHttps, //originalRequest.Scheme,
+                //Host = originalRequest.Host.Host,
+                // Port = originalRequest.Host.Port ?? (originalRequest.Scheme == "https" ? 443 : 80),
+                // Host = $"{user}.example.com",
+                Host = $"{user}-svc",
+                Port = 8088,
+                Path = originalRequest.Path,
+                Query = originalRequest.QueryString.ToString()
             };
+            //var uriBuilder = new UriBuilder(context.ProxyRequest.RequestUri!)
+            //{
+            //    Scheme = "https",
+            //    Host = $"{user}.example.com",
+            //    Port = -1
+            //};
             context.ProxyRequest.RequestUri = uriBuilder.Uri;
         });
     });

@@ -1,11 +1,11 @@
-{{- define "kasm-user-proxy.name" -}}
+{{- define "browser.app" -}}
 {{ .Chart.Name }}
 {{- end }}
 
-{{- define "kasm-user-proxy.fullname" -}}
+{{- define "browser.isolation" -}}
 {{ .Release.Name }}-{{ .Chart.Name }}
 {{- end }}
 
-{{- define "kasm-user-proxy.serviceAccountName" -}}
-{{ include "kasm-user-proxy.fullname" . }}-sa
+{{- define "browser-proxy.serviceAccountName" -}}
+{{ include "browser.isolation" . }}-sa
 {{- end }}
